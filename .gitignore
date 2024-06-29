@@ -1,0 +1,6 @@
+/venv
+
+/data/*
+!/data/.gitkeep
+/credentials/*
+!/credentials/.gitkeep
