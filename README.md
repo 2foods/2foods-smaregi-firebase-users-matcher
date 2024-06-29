@@ -3,7 +3,12 @@
 
 /credentials には、以下のURLからFirebaseのadminのjsonファイルを配置してください。
 
+権限がない場合は、管理者に問い合わせてください。
+
 https://two-store.cybozu.com/k/3/show#record=27
+
+※ このファイルは、Firebaseの管理画面からもダウンロードできますが、取り扱いは注意してください。処理が終わったら、このファイルは削除してください。
+
 
 app.pyの以下の部分で、ファイル名を指定しています。
 
@@ -15,9 +20,6 @@ env = "env"
 # env = "prod"
 cred = credentials.Certificate(f"credentials/{env}.json")
 ```
-
-
-※ このファイルは、Firebaseの管理画面からもダウンロードできますが、取り扱いは注意してください。処理が終わったら、このファイルは削除してください。
 
 # inputデータの配置
 
@@ -40,6 +42,8 @@ https://help.smaregi.jp/hc/ja/articles/360000674267-CSV%E3%83%95%E3%82%A1%E3%82%
 # ローカルの実行
 
 以下のコマンドを実行してください。
+
+件数によって時間がかかります。（200件くらいなら2,3分で終わります。）
 
 ```sh
 $ pip install -r requirements.txt
